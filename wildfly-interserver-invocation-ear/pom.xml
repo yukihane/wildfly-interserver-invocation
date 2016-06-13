@@ -52,6 +52,10 @@
             <artifactId>wildfly-interserver-invocation-ejb</artifactId>
             <type>ejb</type>
         </dependency>
+        <dependency>
+          <groupId>com.github.yukihane.hello.javaee</groupId>
+          <artifactId>wildfly-interserver-invocation-if</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

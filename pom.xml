@@ -14,9 +14,7 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+--><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <name>wildfly-interserver-invocation</name>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.yukihane.hello.javaee</groupId>
@@ -36,7 +34,8 @@
         <module>wildfly-interserver-invocation-ejb</module>
         <module>wildfly-interserver-invocation-web</module>
         <module>wildfly-interserver-invocation-ear</module>
-    </modules>
+    <module>wildfly-interserver-invocation-if</module>
+  </modules>
 
     <properties>
         <!-- Explicitly declaring the source encoding eliminates the following 
@@ -87,6 +86,14 @@
                 <type>war</type>
                 <scope>compile</scope>
             </dependency>
+
+    <dependency>
+      <groupId>com.github.yukihane.hello.javaee</groupId>
+      <artifactId>wildfly-interserver-invocation-if</artifactId>
+      <version>${project.version}</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
 
             <!-- JBoss distributes a complete set of Java EE 7 APIs including
                 a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or 
