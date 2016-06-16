@@ -1,0 +1,10 @@
+[[https://docs.jboss.org/author/display/WFLY10/EJB+invocations+from+a+remote+server+instance][Developer Guide - EJB invocations from a remote server instance]] 実行サンプル.
+
+| wildfly-interserver-invocation-ear | EARパッケージング用モジュール                                 |
+| wildfly-interserver-invocation-ejb | サーバサイドで実行するロジック(EJB)                           |
+| wildfly-interserver-invocation-if  | サーバサイドが提供するインタフェース。CL/SV両方が参照します。 |
+| wildfly-interserver-invocation-web | クライアントサイドモジュール                                  |
+
+サーバサイドモジュールを ~mvn package~ する際には, 
+~wildfly-interserver-invocation-ear/src/main/application/META-INF/jboss-ejb-client.xml~
+ファイルを削除しなければなりません.
