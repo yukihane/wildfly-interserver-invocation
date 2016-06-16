@@ -38,7 +38,7 @@ public class MyServlet extends HttpServlet {
             // https://docs.jboss.org/author/display/AS71/EJB+invocations+from+a+remote+client+using+JNDI
             final Greeter bean = (Greeter) context
                 .lookup("ejb:" + "wildfly-interserver-invocation-ear" + "/" + "wildfly-interserver-invocation-ejb" +
-                    "/" + "" + "/" +
+                    "/" + "myserver" + "/" +
                 "GreeterBean" + "!" + Greeter.class.getName());
 
             // invoke on the bean
